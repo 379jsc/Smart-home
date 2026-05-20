@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>379 TDK – Thiết Bị Vệ Sinh & Dân Dụng Cao Cấp</title>
+  <meta name="description" content="Công ty Cổ phần 379 TDK – Chuyên cung cấp thiết bị vệ sinh, bếp từ, hút mùi và giải pháp dân dụng chất lượng cao tại Hưng Yên." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+</head>
+<body>
+
+<!-- ======================== TOP BAR ======================== -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="topbar-promo">
+      <i data-lucide="zap" class="icon-xs"></i>
+      <span data-vi="Ưu đãi đặc biệt – Miễn phí vận chuyển đơn hàng trên 5 triệu đồng!" data-en="Special offer – Free shipping on orders over 5,000,000 VND!">Ưu đãi đặc biệt – Miễn phí vận chuyển đơn hàng trên 5 triệu đồng!</span>
+    </span>
+    <div class="topbar-right">
+      <a href="tel:+84973480488" class="topbar-link"><i data-lucide="phone" class="icon-xs"></i> +84.973 480 488</a>
+      <a href="mailto:tdk379.co@gmail.com" class="topbar-link"><i data-lucide="mail" class="icon-xs"></i> tdk379.co@gmail.com</a>
+      <button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== HEADER ======================== -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <div class="logo-mark">
+        <span>379</span>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">TDK</span>
+        <span class="logo-sub" data-vi="Thiết Bị Dân Dụng" data-en="Home Equipment">Thiết Bị Dân Dụng</span>
+      </div>
+    </a>
+
+    <!-- Search -->
+    <div class="search-wrap">
+      <div class="search-box">
+        <select class="search-cat" aria-label="Category">
+          <option data-vi="Tất cả" data-en="All">Tất cả</option>
+          <option data-vi="Bồn Cầu" data-en="Toilet">Bồn Cầu</option>
+          <option data-vi="Sen Vòi" data-en="Shower">Sen Vòi</option>
+          <option data-vi="Bếp Từ" data-en="Induction">Bếp Từ</option>
+          <option data-vi="Hút Mùi" data-en="Hood">Hút Mùi</option>
+        </select>
+        <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm..." id="searchInput" />
+        <button class="search-btn" aria-label="Search"><i data-lucide="search"></i></button>
+      </div>
+    </div>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <a href="https://www.facebook.com/share/18jegAjXrb/" target="_blank" class="action-btn" title="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://zalo.me/84339606969" target="_blank" class="action-btn zalo-btn" title="Zalo">
+        <span class="zalo-icon">Z</span>
+      </a>
+      <button class="action-btn cart-btn" onclick="toggleCart()" aria-label="Cart">
+        <i data-lucide="shopping-cart"></i>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+      <button class="menu-toggle" onclick="toggleNav()" aria-label="Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <div class="cat-dropdown">
+        <button class="cat-toggle">
+          <i data-lucide="layout-grid"></i>
+          <span data-vi="Danh mục sản phẩm" data-en="Product Categories">Danh mục sản phẩm</span>
+          <i data-lucide="chevron-down"></i>
+        </button>
+        <div class="cat-menu">
+          <a href="#" class="cat-item"><i data-lucide="droplets"></i><span data-vi="Bồn Cầu" data-en="Toilet">Bồn Cầu</span></a>
+          <a href="#" class="cat-item"><i data-lucide="shower-head"></i><span data-vi="Sen Vòi" data-en="Faucet & Shower">Sen Vòi</span></a>
+          <a href="#" class="cat-item"><i data-lucide="waves"></i><span data-vi="Sen Cây" data-en="Shower Column">Sen Cây</span></a>
+          <a href="#" class="cat-item"><i data-lucide="flame"></i><span data-vi="Bếp Từ" data-en="Induction Cooktop">Bếp Từ</span></a>
+          <a href="#" class="cat-item"><i data-lucide="wind"></i><span data-vi="Máy Hút Mùi" data-en="Range Hood">Máy Hút Mùi</span></a>
+          <a href="#" class="cat-item"><i data-lucide="sun"></i><span data-vi="Năng Lượng Điện" data-en="Electric Energy">Năng Lượng Điện</span></a>
+          <a href="#" class="cat-item"><i data-lucide="home"></i><span data-vi="Thiết Bị Dân Dụng" data-en="Home Appliances">Thiết Bị Dân Dụng</span></a>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active" data-vi="Trang Chủ" data-en="Home">Trang Chủ</a></li>
+        <li><a href="#products" class="nav-link" data-vi="Sản Phẩm" data-en="Products">Sản Phẩm</a></li>
+        <li><a href="#about" class="nav-link" data-vi="Giới Thiệu" data-en="About Us">Giới Thiệu</a></li>
+        <li><a href="#contact" class="nav-link" data-vi="Liên Hệ" data-en="Contact">Liên Hệ</a></li>
+        <li><a href="https://app.379ai.io.vn/" target="_blank" class="nav-link nav-link-special" data-vi="Quản Lý Bán Hàng" data-en="Sales Portal">Quản Lý Bán Hàng ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- ======================== HERO ======================== -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-gradient"></div>
+    <div class="hero-pattern"></div>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <span class="hero-badge">
+        <i data-lucide="award"></i>
+        <span data-vi="Chất lượng cao cấp" data-en="Premium Quality">Chất lượng cao cấp</span>
+      </span>
+      <h1 class="hero-title">
+        <span data-vi="Thiết Bị Vệ Sinh" data-en="Sanitary & Home">Thiết Bị Vệ Sinh</span><br/>
+        <em data-vi="& Dân Dụng Cao Cấp" data-en="& Appliances Premium">& Dân Dụng Cao Cấp</em>
+      </h1>
+      <p class="hero-desc" data-vi="Mang đến không gian sống hoàn hảo với thiết bị chất lượng – bồn cầu, sen vòi, bếp từ và giải pháp dân dụng thông minh từ 379 TDK." data-en="Bringing perfect living spaces with premium equipment – toilets, showers, induction cooktops and smart home solutions from 379 TDK.">
+        Mang đến không gian sống hoàn hảo với thiết bị chất lượng – bồn cầu, sen vòi, bếp từ và giải pháp dân dụng thông minh từ 379 TDK.
+      </p>
+      <div class="hero-ctas">
+        <a href="#products" class="btn btn-primary">
+          <span data-vi="Khám Phá Sản Phẩm" data-en="Explore Products">Khám Phá Sản Phẩm</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <span data-vi="Liên Hệ Tư Vấn" data-en="Get Consultation">Liên Hệ Tư Vấn</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>500+</strong><span data-vi="Sản phẩm" data-en="Products">Sản phẩm</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>1000+</strong><span data-vi="Khách hàng" data-en="Customers">Khách hàng</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>10+</strong><span data-vi="Năm kinh nghiệm" data-en="Years experience">Năm kinh nghiệm</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-wrap">
+        <div class="hero-img-bg"></div>
+        <div class="hero-img-card hero-img-card-1">
+          <i data-lucide="droplets" class="card-icon"></i>
+          <span data-vi="Bồn Cầu Thông Minh" data-en="Smart Toilet">Bồn Cầu Thông Minh</span>
+        </div>
+        <div class="hero-img-card hero-img-card-2">
+          <i data-lucide="flame" class="card-icon"></i>
+          <span data-vi="Bếp Từ Cao Cấp" data-en="Premium Induction">Bếp Từ Cao Cấp</span>
+        </div>
+        <div class="hero-img-card hero-img-card-3">
+          <i data-lucide="wind" class="card-icon"></i>
+          <span data-vi="Hút Mùi Hiện Đại" data-en="Modern Range Hood">Hút Mùi Hiện Đại</span>
+        </div>
+        <div class="hero-center-icon">
+          <div class="hero-icon-ring">
+            <i data-lucide="home" style="width:48px;height:48px;color:var(--gold)"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== FEATURES STRIP ======================== -->
+<div class="features-strip">
+  <div class="container features-grid">
+    <div class="feature-item">
+      <i data-lucide="truck" class="feature-icon"></i>
+      <div>
+        <strong data-vi="Giao hàng toàn quốc" data-en="Nationwide Delivery">Giao hàng toàn quốc</strong>
+        <span data-vi="Đơn từ 5 triệu miễn phí ship" data-en="Free ship orders 5M+">Đơn từ 5 triệu miễn phí ship</span>
+      </div>
+    </div>
+    <div class="feature-item">
+      <i data-lucide="shield-check" class="feature-icon"></i>
+      <div>
+        <strong data-vi="Bảo hành chính hãng" data-en="Official Warranty">Bảo hành chính hãng</strong>
+        <span data-vi="Lên đến 5 năm bảo hành" data-en="Up to 5 years warranty">Lên đến 5 năm bảo hành</span>
+      </div>
+    </div>
+    <div class="feature-item">
+      <i data-lucide="headphones" class="feature-icon"></i>
+      <div>
+        <strong data-vi="Hỗ trợ 24/7" data-en="24/7 Support">Hỗ trợ 24/7</strong>
+        <span data-vi="Tư vấn lắp đặt tận nơi" data-en="On-site installation advice">Tư vấn lắp đặt tận nơi</span>
+      </div>
+    </div>
+    <div class="feature-item">
+      <i data-lucide="refresh-ccw" class="feature-icon"></i>
+      <div>
+        <strong data-vi="Đổi trả 30 ngày" data-en="30-Day Returns">Đổi trả 30 ngày</strong>
+        <span data-vi="Hoàn tiền nếu không hài lòng" data-en="Refund if not satisfied">Hoàn tiền nếu không hài lòng</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== CATEGORIES ======================== -->
+<section class="section categories-section" id="categories">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-vi="Danh mục" data-en="Categories">Danh mục</span>
+      <h2 class="section-title" data-vi="Khám Phá Sản Phẩm" data-en="Explore Our Products">Khám Phá Sản Phẩm</h2>
+    </div>
+    <div class="categories-grid">
+      <div class="cat-card cat-card-large" onclick="filterProducts('toilet')">
+        <div class="cat-card-bg" style="background: linear-gradient(135deg, #0f4c81 0%, #1a6db5 100%)"></div>
+        <div class="cat-card-icon"><i data-lucide="droplets"></i></div>
+        <div class="cat-card-info">
+          <h3 data-vi="Bồn Cầu" data-en="Toilet">Bồn Cầu</h3>
+          <p data-vi="Thông minh & hiện đại" data-en="Smart & modern">Thông minh & hiện đại</p>
+          <span class="cat-count">12 <span data-vi="sản phẩm" data-en="items">sản phẩm</span></span>
+        </div>
+      </div>
+      <div class="cat-card" onclick="filterProducts('shower')">
+        <div class="cat-card-bg" style="background: linear-gradient(135deg, #1a5276 0%, #2e86c1 100%)"></div>
+        <div class="cat-card-icon"><i data-lucide="shower-head"></i></div>
+        <div class="cat-card-info">
+          <h3 data-vi="Sen Vòi" data-en="Faucet & Shower">Sen Vòi</h3>
+          <p data-vi="Sang trọng cao cấp" data-en="Luxury premium">Sang trọng cao cấp</p>
+          <span class="cat-count">18 <span data-vi="sản phẩm" data-en="items">sản phẩm</span></span>
+        </div>
+      </div>
+      <div class="cat-card" onclick="filterProducts('shower-column')">
+        <div class="cat-card-bg" style="background: linear-gradient(135deg, #145a32 0%, #1e8449 100%)"></div>
+        <div class="cat-card-icon"><i data-lucide="waves"></i></div>
+        <div class="cat-card-info">
+          <h3 data-vi="Sen Cây" data-en="Shower Column">Sen Cây</h3>
+          <p data-vi="Trải nghiệm spa tại nhà" data-en="Spa at home experience">Trải nghiệm spa tại nhà</p>
+          <span class="cat-count">8 <span data-vi="sản phẩm" data-en="items">sản phẩm</span></span>
+        </div>
+      </div>
+      <div class="cat-card" onclick="filterProducts('induction')">
+        <div class="cat-card-bg" style="background: linear-gradient(135deg, #7b241c 0%, #cb4335 100%)"></div>
+        <div class="cat-card-icon"><i data-lucide="flame"></i></div>
+        <div class="cat-card-info">
+          <h3 data-vi="Bếp Từ" data-en="Induction Cooktop">Bếp Từ</h3>
+          <p data-vi="Nấu nướng thông minh" data-en="Smart cooking">Nấu nướng thông minh</p>
+          <span class="cat-count">10 <span data-vi="sản phẩm" data-en="items">sản phẩm</span></span>
+        </div>
+      </div>
+      <div class="cat-card" onclick="filterProducts('hood')">
+        <div class="cat-card-bg" style="background: linear-gradient(135deg, #4a235a 0%, #7d3c98 100%)"></div>
+        <div class="cat-card-icon"><i data-lucide="wind"></i></div>
+        <div class="cat-card-info">
+          <h3 data-vi="Máy Hút Mùi" data-en="Range Hood">Máy Hút Mùi</h3>
+          <p data-vi="Không khí trong lành" data-en="Fresh clean air">Không khí trong lành</p>
+          <span class="cat-count">9 <span data-vi="sản phẩm" data-en="items">sản phẩm</span></span>
+        </div>
+      </div>
+      <div class="cat-card" onclick="filterProducts('energy')">
+        <div class="cat-card-bg" style="background: linear-gradient(135deg, #7e6000 0%, #d4ac0d 100%)"></div>
+        <div class="cat-card-icon"><i data-lucide="sun"></i></div>
+        <div class="cat-card-info">
+          <h3 data-vi="Năng Lượng Điện" data-en="Electric Energy">Năng Lượng Điện</h3>
+          <p data-vi="Tiết kiệm & bền vững" data-en="Efficient & sustainable">Tiết kiệm & bền vững</p>
+          <span class="cat-count">15 <span data-vi="sản phẩm" data-en="items">sản phẩm</span></span>
+        </div>
+      </div>
+      <div class="cat-card cat-card-large" onclick="filterProducts('home')">
+        <div class="cat-card-bg" style="background: linear-gradient(135deg, #1b2631 0%, #2e4057 100%)"></div>
+        <div class="cat-card-icon"><i data-lucide="home"></i></div>
+        <div class="cat-card-info">
+          <h3 data-vi="Thiết Bị Dân Dụng" data-en="Home Appliances">Thiết Bị Dân Dụng</h3>
+          <p data-vi="Giải pháp toàn diện cho ngôi nhà của bạn" data-en="Comprehensive solutions for your home">Giải pháp toàn diện cho ngôi nhà của bạn</p>
+          <span class="cat-count">25+ <span data-vi="sản phẩm" data-en="items">sản phẩm</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== PRODUCTS ======================== -->
+<section class="section products-section" id="products">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-vi="Nổi bật" data-en="Featured">Nổi bật</span>
+      <h2 class="section-title" data-vi="Sản Phẩm Bán Chạy" data-en="Best Sellers">Sản Phẩm Bán Chạy</h2>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterProducts('all')" data-vi="Tất cả" data-en="All">Tất cả</button>
+      <button class="filter-tab" onclick="filterProducts('toilet')" data-vi="Bồn Cầu" data-en="Toilet">Bồn Cầu</button>
+      <button class="filter-tab" onclick="filterProducts('shower')" data-vi="Sen Vòi" data-en="Shower">Sen Vòi</button>
+      <button class="filter-tab" onclick="filterProducts('induction')" data-vi="Bếp Từ" data-en="Induction">Bếp Từ</button>
+      <button class="filter-tab" onclick="filterProducts('hood')" data-vi="Hút Mùi" data-en="Hood">Hút Mùi</button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid" id="productsGrid">
+
+      <div class="product-card" data-cat="toilet">
+        <div class="product-badge badge-sale" data-vi="Mới" data-en="New">Mới</div>
+        <div class="product-img-wrap">
+          <div class="product-img-placeholder" style="background: linear-gradient(135deg,#e8f4f8,#b8dde8)">
+            <i data-lucide="droplets" style="width:56px;height:56px;color:#1a6db5;opacity:.7"></i>
+          </div>
+          <div class="product-actions">
+            <button class="prod-action-btn" title="Xem nhanh"><i data-lucide="eye"></i></button>
+            <button class="prod-action-btn" title="Yêu thích"><i data-lucide="heart"></i></button>
+            <button class="prod-action-btn" title="So sánh"><i data-lucide="bar-chart-2"></i></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <span class="product-cat" data-vi="Bồn Cầu" data-en="Toilet">Bồn Cầu</span>
+          <h3 class="product-name">TOTO CS300 <span data-vi="Thông Minh" data-en="Smart">Thông Minh</span></h3>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span><span class="rating-count">(48)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">8.500.000₫</span>
+            <span class="price-old">10.000.000₫</span>
+          </div>
+          <button class="btn-add-cart" onclick="addToCart(this, 'TOTO CS300', '8.500.000₫')">
+            <i data-lucide="shopping-cart"></i>
+            <span data-vi="Thêm vào giỏ" data-en="Add to Cart">Thêm vào giỏ</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="shower">
+        <div class="product-badge badge-hot" data-vi="Hot" data-en="Hot">Hot</div>
+        <div class="product-img-wrap">
+          <div class="product-img-placeholder" style="background: linear-gradient(135deg,#e8f4fb,#c5e3f7)">
+            <i data-lucide="shower-head" style="width:56px;height:56px;color:#2980b9;opacity:.7"></i>
+          </div>
+          <div class="product-actions">
+            <button class="prod-action-btn" title="Xem nhanh"><i data-lucide="eye"></i></button>
+            <button class="prod-action-btn" title="Yêu thích"><i data-lucide="heart"></i></button>
+            <button class="prod-action-btn" title="So sánh"><i data-lucide="bar-chart-2"></i></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <span class="product-cat" data-vi="Sen Vòi" data-en="Shower">Sen Vòi</span>
+          <h3 class="product-name">GROHE Grohtherm Pro</h3>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span><span class="rating-count">(127)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">4.200.000₫</span>
+            <span class="price-old">5.500.000₫</span>
+          </div>
+          <button class="btn-add-cart" onclick="addToCart(this, 'GROHE Grohtherm Pro', '4.200.000₫')">
+            <i data-lucide="shopping-cart"></i>
+            <span data-vi="Thêm vào giỏ" data-en="Add to Cart">Thêm vào giỏ</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="induction">
+        <div class="product-img-wrap">
+          <div class="product-img-placeholder" style="background: linear-gradient(135deg,#fbeaea,#f1948a)">
+            <i data-lucide="flame" style="width:56px;height:56px;color:#c0392b;opacity:.7"></i>
+          </div>
+          <div class="product-actions">
+            <button class="prod-action-btn" title="Xem nhanh"><i data-lucide="eye"></i></button>
+            <button class="prod-action-btn" title="Yêu thích"><i data-lucide="heart"></i></button>
+            <button class="prod-action-btn" title="So sánh"><i data-lucide="bar-chart-2"></i></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <span class="product-cat" data-vi="Bếp Từ" data-en="Induction">Bếp Từ</span>
+          <h3 class="product-name">Bosch Series 8 <span data-vi="2 Vùng" data-en="2 Zone">2 Vùng</span></h3>
+          <div class="product-rating">
+            <span class="stars">★★★★☆</span><span class="rating-count">(89)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">12.900.000₫</span>
+          </div>
+          <button class="btn-add-cart" onclick="addToCart(this, 'Bosch Series 8', '12.900.000₫')">
+            <i data-lucide="shopping-cart"></i>
+            <span data-vi="Thêm vào giỏ" data-en="Add to Cart">Thêm vào giỏ</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="hood">
+        <div class="product-badge badge-sale" data-vi="-20%" data-en="-20%">-20%</div>
+        <div class="product-img-wrap">
+          <div class="product-img-placeholder" style="background: linear-gradient(135deg,#f3e8fb,#d7bde2)">
+            <i data-lucide="wind" style="width:56px;height:56px;color:#7d3c98;opacity:.7"></i>
+          </div>
+          <div class="product-actions">
+            <button class="prod-action-btn" title="Xem nhanh"><i data-lucide="eye"></i></button>
+            <button class="prod-action-btn" title="Yêu thích"><i data-lucide="heart"></i></button>
+            <button class="prod-action-btn" title="So sánh"><i data-lucide="bar-chart-2"></i></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <span class="product-cat" data-vi="Máy Hút Mùi" data-en="Range Hood">Máy Hút Mùi</span>
+          <h3 class="product-name">Elica FEEL <span data-vi="Đảo Bếp" data-en="Island">Đảo Bếp</span></h3>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span><span class="rating-count">(62)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">15.600.000₫</span>
+            <span class="price-old">19.500.000₫</span>
+          </div>
+          <button class="btn-add-cart" onclick="addToCart(this, 'Elica FEEL', '15.600.000₫')">
+            <i data-lucide="shopping-cart"></i>
+            <span data-vi="Thêm vào giỏ" data-en="Add to Cart">Thêm vào giỏ</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="shower-column">
+        <div class="product-badge badge-hot" data-vi="Mới" data-en="New">Mới</div>
+        <div class="product-img-wrap">
+          <div class="product-img-placeholder" style="background: linear-gradient(135deg,#e8f8f5,#a9dfbf)">
+            <i data-lucide="waves" style="width:56px;height:56px;color:#1e8449;opacity:.7"></i>
+          </div>
+          <div class="product-actions">
+            <button class="prod-action-btn" title="Xem nhanh"><i data-lucide="eye"></i></button>
+            <button class="prod-action-btn" title="Yêu thích"><i data-lucide="heart"></i></button>
+            <button class="prod-action-btn" title="So sánh"><i data-lucide="bar-chart-2"></i></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <span class="product-cat" data-vi="Sen Cây" data-en="Shower Column">Sen Cây</span>
+          <h3 class="product-name">Hansgrohe Raindance S <span data-vi="Spa" data-en="Spa">Spa</span></h3>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span><span class="rating-count">(34)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">22.000.000₫</span>
+          </div>
+          <button class="btn-add-cart" onclick="addToCart(this, 'Hansgrohe Raindance S', '22.000.000₫')">
+            <i data-lucide="shopping-cart"></i>
+            <span data-vi="Thêm vào giỏ" data-en="Add to Cart">Thêm vào giỏ</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="energy">
+        <div class="product-img-wrap">
+          <div class="product-img-placeholder" style="background: linear-gradient(135deg,#fef9e7,#f9e79f)">
+            <i data-lucide="sun" style="width:56px;height:56px;color:#d4ac0d;opacity:.7"></i>
+          </div>
+          <div class="product-actions">
+            <button class="prod-action-btn" title="Xem nhanh"><i data-lucide="eye"></i></button>
+            <button class="prod-action-btn" title="Yêu thích"><i data-lucide="heart"></i></button>
+            <button class="prod-action-btn" title="So sánh"><i data-lucide="bar-chart-2"></i></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <span class="product-cat" data-vi="Năng Lượng Điện" data-en="Electric Energy">Năng Lượng Điện</span>
+          <h3 class="product-name">SolarEdge <span data-vi="Bình Nước Nóng 200L" data-en="Water Heater 200L">Bình Nước Nóng 200L</span></h3>
+          <div class="product-rating">
+            <span class="stars">★★★★☆</span><span class="rating-count">(71)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">18.500.000₫</span>
+            <span class="price-old">21.000.000₫</span>
+          </div>
+          <button class="btn-add-cart" onclick="addToCart(this, 'SolarEdge 200L', '18.500.000₫')">
+            <i data-lucide="shopping-cart"></i>
+            <span data-vi="Thêm vào giỏ" data-en="Add to Cart">Thêm vào giỏ</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="toilet">
+        <div class="product-badge badge-sale" data-vi="-15%" data-en="-15%">-15%</div>
+        <div class="product-img-wrap">
+          <div class="product-img-placeholder" style="background: linear-gradient(135deg,#eaf2fb,#aed6f1)">
+            <i data-lucide="droplets" style="width:56px;height:56px;color:#1a6db5;opacity:.7"></i>
+          </div>
+          <div class="product-actions">
+            <button class="prod-action-btn" title="Xem nhanh"><i data-lucide="eye"></i></button>
+            <button class="prod-action-btn" title="Yêu thích"><i data-lucide="heart"></i></button>
+            <button class="prod-action-btn" title="So sánh"><i data-lucide="bar-chart-2"></i></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <span class="product-cat" data-vi="Bồn Cầu" data-en="Toilet">Bồn Cầu</span>
+          <h3 class="product-name">American Standard <span data-vi="Acacia E" data-en="Acacia E">Acacia E</span></h3>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span><span class="rating-count">(95)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">6.800.000₫</span>
+            <span class="price-old">8.000.000₫</span>
+          </div>
+          <button class="btn-add-cart" onclick="addToCart(this, 'American Standard Acacia E', '6.800.000₫')">
+            <i data-lucide="shopping-cart"></i>
+            <span data-vi="Thêm vào giỏ" data-en="Add to Cart">Thêm vào giỏ</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="home">
+        <div class="product-img-wrap">
+          <div class="product-img-placeholder" style="background: linear-gradient(135deg,#e8eaed,#b2bec3)">
+            <i data-lucide="home" style="width:56px;height:56px;color:#2d3436;opacity:.5"></i>
+          </div>
+          <div class="product-actions">
+            <button class="prod-action-btn" title="Xem nhanh"><i data-lucide="eye"></i></button>
+            <button class="prod-action-btn" title="Yêu thích"><i data-lucide="heart"></i></button>
+            <button class="prod-action-btn" title="So sánh"><i data-lucide="bar-chart-2"></i></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <span class="product-cat" data-vi="Thiết Bị Dân Dụng" data-en="Home Appliance">Thiết Bị Dân Dụng</span>
+          <h3 class="product-name">Hafele <span data-vi="Gương Phòng Tắm Thông Minh" data-en="Smart Bathroom Mirror">Gương Phòng Tắm</span></h3>
+          <div class="product-rating">
+            <span class="stars">★★★★☆</span><span class="rating-count">(43)</span>
+          </div>
+          <div class="product-price">
+            <span class="price-current">3.200.000₫</span>
+          </div>
+          <button class="btn-add-cart" onclick="addToCart(this, 'Hafele Smart Mirror', '3.200.000₫')">
+            <i data-lucide="shopping-cart"></i>
+            <span data-vi="Thêm vào giỏ" data-en="Add to Cart">Thêm vào giỏ</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="view-all-wrap">
+      <a href="#" class="btn btn-outline btn-lg" data-vi="Xem Tất Cả Sản Phẩm" data-en="View All Products">Xem Tất Cả Sản Phẩm</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== PROMO BANNER ======================== -->
+<section class="promo-banner">
+  <div class="container promo-inner">
+    <div class="promo-content">
+      <span class="promo-label" data-vi="Ưu đãi đặc biệt" data-en="Special Offer">Ưu đãi đặc biệt</span>
+      <h2 data-vi="Giảm Đến 30% Bếp Từ & Máy Hút Mùi" data-en="Up to 30% Off Induction & Range Hoods">Giảm Đến 30% Bếp Từ & Máy Hút Mùi</h2>
+      <p data-vi="Áp dụng cho đơn hàng đặt trong tháng này. Liên hệ ngay để nhận ưu đãi!" data-en="Valid for orders placed this month. Contact us now to receive the offer!">Áp dụng cho đơn hàng đặt trong tháng này. Liên hệ ngay để nhận ưu đãi!</p>
+      <div class="promo-countdown" id="countdown">
+        <div class="countdown-item"><span id="cdDays">07</span><small data-vi="Ngày" data-en="Days">Ngày</small></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item"><span id="cdHours">12</span><small data-vi="Giờ" data-en="Hours">Giờ</small></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item"><span id="cdMins">34</span><small data-vi="Phút" data-en="Mins">Phút</small></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item"><span id="cdSecs">00</span><small data-vi="Giây" data-en="Secs">Giây</small></div>
+      </div>
+      <a href="#contact" class="btn btn-gold" data-vi="Liên Hệ Ngay" data-en="Contact Now">Liên Hệ Ngay</a>
+    </div>
+    <div class="promo-visual">
+      <div class="promo-circles">
+        <div class="promo-circle promo-c1"><i data-lucide="flame" style="width:40px;height:40px;color:white"></i></div>
+        <div class="promo-circle promo-c2"><i data-lucide="wind" style="width:32px;height:32px;color:white"></i></div>
+        <div class="promo-circle promo-c3"><span class="promo-percent">30%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== ABOUT ======================== -->
+<section class="section about-section" id="about">
+  <div class="container about-inner">
+    <div class="about-visual">
+      <div class="about-img-grid">
+        <div class="about-img-1"><i data-lucide="building-2" style="width:64px;height:64px;color:var(--primary)"></i></div>
+        <div class="about-img-2"><i data-lucide="award" style="width:48px;height:48px;color:var(--gold)"></i></div>
+        <div class="about-badge-wrap">
+          <div class="about-badge">
+            <strong>10+</strong>
+            <span data-vi="Năm kinh nghiệm" data-en="Years experience">Năm kinh nghiệm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-content">
+      <span class="section-tag" data-vi="Về chúng tôi" data-en="About Us">Về chúng tôi</span>
+      <h2 class="section-title" data-vi="Công Ty Cổ Phần 379 TDK" data-en="379 TDK Joint Stock Company">Công Ty Cổ Phần 379 TDK</h2>
+      <p class="about-desc" data-vi="Chúng tôi chuyên cung cấp thiết bị vệ sinh và dân dụng cao cấp tại Hưng Yên và toàn quốc. Với hơn 10 năm kinh nghiệm, 379 TDK tự hào mang đến những sản phẩm chất lượng từ các thương hiệu hàng đầu thế giới." data-en="We specialize in providing premium sanitary and household equipment in Hung Yen province and nationwide. With over 10 years of experience, 379 TDK is proud to bring quality products from the world's leading brands.">
+        Chúng tôi chuyên cung cấp thiết bị vệ sinh và dân dụng cao cấp tại Hưng Yên và toàn quốc. Với hơn 10 năm kinh nghiệm, 379 TDK tự hào mang đến những sản phẩm chất lượng từ các thương hiệu hàng đầu thế giới.
+      </p>
+      <div class="about-features">
+        <div class="about-feat"><i data-lucide="check-circle-2" class="feat-icon"></i><span data-vi="Sản phẩm chính hãng 100%" data-en="100% authentic products">Sản phẩm chính hãng 100%</span></div>
+        <div class="about-feat"><i data-lucide="check-circle-2" class="feat-icon"></i><span data-vi="Lắp đặt chuyên nghiệp tại nhà" data-en="Professional home installation">Lắp đặt chuyên nghiệp tại nhà</span></div>
+        <div class="about-feat"><i data-lucide="check-circle-2" class="feat-icon"></i><span data-vi="Bảo hành lên đến 5 năm" data-en="Warranty up to 5 years">Bảo hành lên đến 5 năm</span></div>
+        <div class="about-feat"><i data-lucide="check-circle-2" class="feat-icon"></i><span data-vi="Tư vấn thiết kế miễn phí" data-en="Free design consultation">Tư vấn thiết kế miễn phí</span></div>
+      </div>
+      <a href="#contact" class="btn btn-primary">
+        <span data-vi="Liên Hệ Ngay" data-en="Contact Us">Liên Hệ Ngay</span>
+        <i data-lucide="arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== TESTIMONIALS ======================== -->
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-vi="Đánh giá" data-en="Reviews">Đánh giá</span>
+      <h2 class="section-title" data-vi="Khách Hàng Nói Gì?" data-en="What Customers Say?">Khách Hàng Nói Gì?</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-vi='"Sản phẩm chất lượng tuyệt vời, lắp đặt chuyên nghiệp. 379 TDK đã giúp phòng tắm nhà tôi trở nên hoàn hảo!"' data-en='"Excellent product quality, professional installation. 379 TDK made my bathroom perfect!"'>"Sản phẩm chất lượng tuyệt vời, lắp đặt chuyên nghiệp. 379 TDK đã giúp phòng tắm nhà tôi trở nên hoàn hảo!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#2980b9,#1a6db5)">N</div>
+          <div>
+            <strong>Nguyễn Văn Minh</strong>
+            <span data-vi="Hưng Yên" data-en="Hung Yen">Hưng Yên</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-vi='"Bếp từ Bosch mua tại đây hoạt động rất tốt, giá cạnh tranh, nhân viên tư vấn nhiệt tình. Rất hài lòng!"' data-en='"The Bosch induction cooktop purchased here works great, competitive price, enthusiastic staff. Very satisfied!"'>"Bếp từ Bosch mua tại đây hoạt động rất tốt, giá cạnh tranh, nhân viên tư vấn nhiệt tình. Rất hài lòng!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#7d3c98,#9b59b6)">T</div>
+          <div>
+            <strong>Trần Thị Lan</strong>
+            <span data-vi="Hà Nội" data-en="Hanoi">Hà Nội</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-vi='"Đặt hàng online nhanh, giao hàng đúng hẹn, sản phẩm đóng gói cẩn thận. Sẽ tiếp tục mua tại 379 TDK!"' data-en='"Fast online ordering, on-time delivery, carefully packaged products. Will continue shopping at 379 TDK!"'>"Đặt hàng online nhanh, giao hàng đúng hẹn, sản phẩm đóng gói cẩn thận. Sẽ tiếp tục mua tại 379 TDK!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#1e8449,#27ae60)">P</div>
+          <div>
+            <strong>Phạm Đức Thành</strong>
+            <span data-vi="Hải Dương" data-en="Hai Duong">Hải Dương</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== CONTACT ======================== -->
+<section class="section contact-section" id="contact">
+  <div class="container contact-inner">
+    <div class="contact-info">
+      <span class="section-tag" data-vi="Liên hệ" data-en="Contact">Liên hệ</span>
+      <h2 class="section-title" data-vi="Hãy Kết Nối Với Chúng Tôi" data-en="Let's Connect">Hãy Kết Nối Với Chúng Tôi</h2>
+      <p data-vi="Liên hệ để được tư vấn và báo giá tốt nhất cho nhu cầu thiết bị vệ sinh và dân dụng của bạn." data-en="Contact us for the best consultation and pricing for your sanitary and household equipment needs.">Liên hệ để được tư vấn và báo giá tốt nhất cho nhu cầu thiết bị vệ sinh và dân dụng của bạn.</p>
+
+      <div class="contact-cards">
+        <a href="tel:+84973480488" class="contact-card">
+          <div class="contact-card-icon" style="background:linear-gradient(135deg,#1a6db5,#2980b9)"><i data-lucide="phone"></i></div>
+          <div>
+            <strong data-vi="Hotline" data-en="Hotline">Hotline</strong>
+            <span>+84.973 480 488</span>
+          </div>
+        </a>
+        <a href="https://zalo.me/84339606969" target="_blank" class="contact-card">
+          <div class="contact-card-icon" style="background:linear-gradient(135deg,#0068ff,#0084ff)"><span style="font-weight:800;font-size:18px;color:white">Z</span></div>
+          <div>
+            <strong>Zalo</strong>
+            <span>+84.339 60 69 69</span>
+          </div>
+        </a>
+        <a href="mailto:tdk379.co@gmail.com" class="contact-card">
+          <div class="contact-card-icon" style="background:linear-gradient(135deg,#c23321,#ea4335)"><i data-lucide="mail"></i></div>
+          <div>
+            <strong>Email</strong>
+            <span>tdk379.co@gmail.com</span>
+          </div>
+        </a>
+        <a href="https://www.facebook.com/share/18jegAjXrb/" target="_blank" class="contact-card">
+          <div class="contact-card-icon" style="background:linear-gradient(135deg,#1877f2,#3b5998)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </div>
+          <div>
+            <strong>Facebook / Fanpage</strong>
+            <span data-vi="Theo dõi chúng tôi" data-en="Follow us">Theo dõi chúng tôi</span>
+          </div>
+        </a>
+        <div class="contact-card contact-address">
+          <div class="contact-card-icon" style="background:linear-gradient(135deg,#555,#333)"><i data-lucide="map-pin"></i></div>
+          <div>
+            <strong data-vi="Địa chỉ" data-en="Address">Địa chỉ</strong>
+            <span data-vi="Khu Biệt Thự Tân Phố Hiến, Hưng Yên" data-en="Tan Pho Hien Villa Zone, Hung Yen">Khu Biệt Thự Tân Phố Hiến, Hưng Yên</span>
+          </div>
+        </div>
+        <a href="https://app.379ai.io.vn/" target="_blank" class="contact-card">
+          <div class="contact-card-icon" style="background:linear-gradient(135deg,#0f4c81,#1a6db5)"><i data-lucide="bar-chart-3"></i></div>
+          <div>
+            <strong data-vi="Quản Lý Bán Hàng" data-en="Sales Portal">Quản Lý Bán Hàng</strong>
+            <span>app.379ai.io.vn ↗</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-wrap">
+      <h3 data-vi="Gửi Yêu Cầu Tư Vấn" data-en="Send Consultation Request">Gửi Yêu Cầu Tư Vấn</h3>
+      <div class="form-group">
+        <label data-vi="Họ và tên *" data-en="Full Name *">Họ và tên *</label>
+        <input type="text" class="form-control" placeholder="Nguyễn Văn A" />
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label data-vi="Số điện thoại *" data-en="Phone *">Số điện thoại *</label>
+          <input type="tel" class="form-control" placeholder="+84..." />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-control" placeholder="email@example.com" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label data-vi="Sản phẩm quan tâm" data-en="Product Interest">Sản phẩm quan tâm</label>
+        <select class="form-control">
+          <option data-vi="-- Chọn danh mục --" data-en="-- Select category --">-- Chọn danh mục --</option>
+          <option data-vi="Bồn Cầu" data-en="Toilet">Bồn Cầu</option>
+          <option data-vi="Sen Vòi" data-en="Shower">Sen Vòi</option>
+          <option data-vi="Sen Cây" data-en="Shower Column">Sen Cây</option>
+          <option data-vi="Bếp Từ" data-en="Induction Cooktop">Bếp Từ</option>
+          <option data-vi="Máy Hút Mùi" data-en="Range Hood">Máy Hút Mùi</option>
+          <option data-vi="Năng Lượng Điện" data-en="Electric Energy">Năng Lượng Điện</option>
+          <option data-vi="Thiết Bị Dân Dụng" data-en="Home Appliances">Thiết Bị Dân Dụng</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label data-vi="Nội dung" data-en="Message">Nội dung</label>
+        <textarea class="form-control" rows="4" placeholder="Mô tả nhu cầu của bạn..."></textarea>
+      </div>
+      <button class="btn btn-primary btn-block" onclick="submitForm(this)">
+        <i data-lucide="send"></i>
+        <span data-vi="Gửi Yêu Cầu" data-en="Send Request">Gửi Yêu Cầu</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== FOOTER ======================== -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-mark"><span>379</span></div>
+          <div class="logo-text">
+            <span class="logo-name">TDK</span>
+            <span class="logo-sub" data-vi="Thiết Bị Dân Dụng" data-en="Home Equipment">Thiết Bị Dân Dụng</span>
+          </div>
+        </div>
+        <p class="footer-desc" data-vi="Công ty Cổ phần 379 TDK – Đơn vị hàng đầu trong lĩnh vực thiết bị vệ sinh và dân dụng tại Hưng Yên." data-en="379 TDK Joint Stock Company – Leading provider of sanitary and household equipment in Hung Yen.">Công ty Cổ phần 379 TDK – Đơn vị hàng đầu trong lĩnh vực thiết bị vệ sinh và dân dụng tại Hưng Yên.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/share/18jegAjXrb/" target="_blank" class="social-btn" title="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://zalo.me/84339606969" target="_blank" class="social-btn" title="Zalo">
+            <span style="font-weight:800;font-size:14px">Z</span>
+          </a>
+          <a href="tel:+84973480488" class="social-btn" title="Phone">
+            <i data-lucide="phone" style="width:16px;height:16px"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-vi="Sản Phẩm" data-en="Products">Sản Phẩm</h4>
+        <ul class="footer-links">
+          <li><a href="#" data-vi="Bồn Cầu" data-en="Toilet">Bồn Cầu</a></li>
+          <li><a href="#" data-vi="Sen Vòi" data-en="Faucet & Shower">Sen Vòi</a></li>
+          <li><a href="#" data-vi="Sen Cây" data-en="Shower Column">Sen Cây</a></li>
+          <li><a href="#" data-vi="Bếp Từ" data-en="Induction Cooktop">Bếp Từ</a></li>
+          <li><a href="#" data-vi="Máy Hút Mùi" data-en="Range Hood">Máy Hút Mùi</a></li>
+          <li><a href="#" data-vi="Năng Lượng Điện" data-en="Electric Energy">Năng Lượng Điện</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-vi="Thông Tin" data-en="Information">Thông Tin</h4>
+        <ul class="footer-links">
+          <li><a href="#about" data-vi="Giới Thiệu" data-en="About Us">Giới Thiệu</a></li>
+          <li><a href="#" data-vi="Chính Sách Bảo Hành" data-en="Warranty Policy">Chính Sách Bảo Hành</a></li>
+          <li><a href="#" data-vi="Chính Sách Đổi Trả" data-en="Return Policy">Chính Sách Đổi Trả</a></li>
+          <li><a href="#" data-vi="Hướng Dẫn Mua Hàng" data-en="Shopping Guide">Hướng Dẫn Mua Hàng</a></li>
+          <li><a href="https://app.379ai.io.vn/" target="_blank" data-vi="Quản Lý Bán Hàng" data-en="Sales Portal">Quản Lý Bán Hàng ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-vi="Liên Hệ" data-en="Contact">Liên Hệ</h4>
+        <ul class="footer-contact-list">
+          <li><i data-lucide="map-pin" class="icon-sm"></i><span data-vi="Khu Biệt Thự Tân Phố Hiến, Hưng Yên" data-en="Tan Pho Hien Villa Zone, Hung Yen">Khu Biệt Thự Tân Phố Hiến, Hưng Yên</span></li>
+          <li><i data-lucide="phone" class="icon-sm"></i><a href="tel:+84973480488">+84.973 480 488</a></li>
+          <li><i data-lucide="phone" class="icon-sm"></i><a href="tel:+84339606969">+84.339 60 69 69 (Zalo)</a></li>
+          <li><i data-lucide="mail" class="icon-sm"></i><a href="mailto:tdk379.co@gmail.com">tdk379.co@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p data-vi="© 2024 Công ty Cổ phần 379 TDK. Tất cả quyền được bảo lưu." data-en="© 2024 379 TDK Joint Stock Company. All rights reserved.">© 2024 Công ty Cổ phần 379 TDK. Tất cả quyền được bảo lưu.</p>
+      <div class="footer-bottom-links">
+        <a href="#" data-vi="Điều Khoản" data-en="Terms">Điều Khoản</a>
+        <a href="#" data-vi="Bảo Mật" data-en="Privacy">Bảo Mật</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-sidebar-header">
+    <h3 data-vi="Giỏ Hàng" data-en="Shopping Cart">Giỏ Hàng</h3>
+    <button onclick="toggleCart()"><i data-lucide="x"></i></button>
+  </div>
+  <div class="cart-sidebar-body" id="cartBody">
+    <div class="cart-empty" id="cartEmpty">
+      <i data-lucide="shopping-cart" style="width:48px;height:48px;opacity:.3"></i>
+      <p data-vi="Giỏ hàng trống" data-en="Cart is empty">Giỏ hàng trống</p>
+    </div>
+    <div id="cartItems"></div>
+  </div>
+  <div class="cart-sidebar-footer">
+    <div class="cart-total">
+      <span data-vi="Tổng cộng:" data-en="Total:">Tổng cộng:</span>
+      <strong id="cartTotal">0₫</strong>
+    </div>
+    <button class="btn btn-primary btn-block" data-vi="Đặt Hàng Ngay" data-en="Order Now">Đặt Hàng Ngay</button>
+    <a href="#contact" class="btn btn-outline btn-block" onclick="toggleCart()" data-vi="Tư Vấn Thêm" data-en="Get More Advice">Tư Vấn Thêm</a>
+  </div>
+</div>
+
+<!-- FLOATING ACTIONS -->
+<div class="float-actions">
+  <a href="tel:+84973480488" class="float-btn float-phone" title="Gọi điện">
+    <i data-lucide="phone"></i>
+  </a>
+  <a href="https://zalo.me/84339606969" target="_blank" class="float-btn float-zalo" title="Zalo">
+    <span style="font-weight:800;font-size:16px">Z</span>
+  </a>
+  <button class="float-btn float-top" id="scrollTopBtn" onclick="scrollToTop()" title="Lên đầu trang" style="display:none">
+    <i data-lucide="arrow-up"></i>
+  </button>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
